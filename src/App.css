@@ -1,0 +1,51 @@
+.btn{
+  color: black;
+  font-size: large;
+  cursor: pointer;
+}
+
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.start-btn{
+  height: 5vh;
+  width: 8vw;
+}
+
+.quote-input-section{
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.quote-input-section input{
+  height: 3vh;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
