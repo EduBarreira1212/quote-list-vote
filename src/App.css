@@ -21,7 +21,7 @@
 }
 
 .start-btn{
-  height: 5vh;
+  height: 8vh;
   width: 8vw;
 }
 
@@ -38,14 +38,4 @@
 
 .hidden{
   display: none;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
