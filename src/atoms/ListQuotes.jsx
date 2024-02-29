@@ -2,11 +2,11 @@
 const ListQuote = ({array}) => {
     return (
         <>
-            <ul>
+            <li>
                 {array.map((item, index) => (
                 <li key={index}>{item}</li>
                 ))}
-            </ul>
+            </li>
         </>
     );
         
