@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
+import Quote from "../atoms/Quote";
 
 
 const QuoteInput = () => {
     const [author, setAuthor] = useState();
     const [text, setText] = useState();
-    const [quote, setQuote] = useState();
+    const [quote, setQuote] = useState({author: "", text: ""});
     const [quoteList, setQuoteList] = useState([]);
 
     const handleAuthorChange = (event) => {
@@ -18,11 +19,8 @@ const QuoteInput = () => {
     }
 
     const handleClick = () => {
-        console.log(quote);
         setQuote({author: author, text: text});
-        console.log(quote);
-        setQuoteList((prev) => [...prev, quote])
-        console.table(quoteList);
+        setQuoteList((prev) => [...prev, quote]);
     }
 
     return (
@@ -31,6 +29,9 @@ const QuoteInput = () => {
                 <Input className="input-author" onChange={handleAuthorChange} placeholder="Author"/>
                 <Input className="input-text" onChange={handleTextChange} placeholder="Text"/>
                 <Button classname="btn" onClick={handleClick}>Send</Button>
+                {quoteList.map((item, index) => (
+                <Quote key={index}>{item}</Quote>
+                ))}
             </section>
         </>
     );
