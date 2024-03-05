@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Quote from "../atoms/Quote";
+import VoteButtons from "../atoms/VoteButtons";
 
 
 const QuoteInput = () => {
@@ -28,6 +29,7 @@ const QuoteInput = () => {
             <section className="quote-input-section hidden">
                 <Input className="input-author" onChange={handleAuthorChange} placeholder="Author"/>
                 <Input className="input-text" onChange={handleTextChange} placeholder="Text"/>
+                <VoteButtons/>
                 <Button classname="btn" onClick={handleClick}>Send</Button>
                 {quoteList.map((item, index) => (
                 <Quote key={index}>{item}</Quote>

@@ -1,4 +1,3 @@
-import VoteButtons from "./VoteButtons";
 
 const Quote = ({children}) => {
     return (
@@ -7,7 +6,6 @@ const Quote = ({children}) => {
                 <p id="p-quote">Author: {children.author}</p>
                 <p id="p-quote">Text: {children.text}</p>
             </div>
-            <VoteButtons/>
         </>
         
     );
