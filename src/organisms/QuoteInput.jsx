@@ -8,7 +8,8 @@ import VoteButtons from "../atoms/VoteButtons";
 const QuoteInput = () => {
     const [author, setAuthor] = useState();
     const [text, setText] = useState();
-    const [quote, setQuote] = useState({author: "", text: ""});
+    const [note, setNote] = useState();
+    const [quote, setQuote] = useState({author: "", text: "", note: 0});
     const [quoteList, setQuoteList] = useState([]);
 
     const handleAuthorChange = (event) => {
@@ -19,8 +20,12 @@ const QuoteInput = () => {
         setText(event.target.value);
     }
 
+    const handleVoteClick = (event) => {
+        setNote(event.target.value);
+    }
+
     const handleClick = () => {
-        setQuote({author: author, text: text});
+        setQuote({author: author, text: text, note: note});
         setQuoteList((prev) => [...prev, quote]);
     }
 
@@ -29,7 +34,7 @@ const QuoteInput = () => {
             <section className="quote-input-section hidden">
                 <Input className="input-author" onChange={handleAuthorChange} placeholder="Author"/>
                 <Input className="input-text" onChange={handleTextChange} placeholder="Text"/>
-                <VoteButtons/>
+                <VoteButtons onClick={handleVoteClick}/>
                 <Button classname="btn" onClick={handleClick}>Send</Button>
                 {quoteList.map((item, index) => (
                 <Quote key={index}>{item}</Quote>
