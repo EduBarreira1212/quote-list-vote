@@ -27,6 +27,8 @@ const QuoteInput = () => {
     const handleClick = () => {
         setQuote({author: author, text: text, note: note});
         setQuoteList((prev) => [...prev, quote]);
+        quoteList.sort((a, b) => b.note - a.note);
+        console.table(quoteList);
     }
 
     return (
