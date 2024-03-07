@@ -27,8 +27,6 @@ const QuoteInput = () => {
     const handleClick = () => {
         setQuote({author: author, text: text, note: note});
         setQuoteList((prev) => [...prev, quote]);
-        quoteList.sort((a, b) => b.note - a.note);
-        console.table(quoteList);
     }
 
     return (
@@ -38,7 +36,7 @@ const QuoteInput = () => {
                 <Input className="input-text" onChange={handleTextChange} placeholder="Text"/>
                 <VoteButtons onClick={handleVoteClick}/>
                 <Button classname="btn" onClick={handleClick}>Send</Button>
-                {quoteList.map((item, index) => (
+                {quoteList.sort((a, b) => b.note - a.note).map((item, index) => (
                 <Quote key={index}>{item}</Quote>
                 ))}
             </section>
