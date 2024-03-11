@@ -3,6 +3,7 @@ import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Quote from "../atoms/Quote";
 import VoteButtons from "../atoms/VoteButtons";
+import axios from 'axios';
 
 
 const QuoteInput = () => {
