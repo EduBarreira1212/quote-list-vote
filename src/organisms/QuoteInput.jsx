@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Quote from "../atoms/Quote";
@@ -12,6 +12,20 @@ const QuoteInput = () => {
     const [note, setNote] = useState();
     const [quote, setQuote] = useState({author: "", text: "", note: 0});
     const [quoteList, setQuoteList] = useState([]);
+
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("https://type.fit/api/quotes");
+                setQuoteList(response.data);
+            } catch (error) {
+                console.log("Error fetching data", error);
+            }
+        };
+        fetchData();
+    }, []);
+
 
     const handleAuthorChange = (event) => {
         setAuthor(event.target.value);
