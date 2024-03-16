@@ -47,6 +47,11 @@
   font-size: larger;
 }
 
+.btn-ToVote{
+  width: 30vw;
+  font-size: larger;
+}
+
 #div-quote{
   text-align: center;
   height: fit-content;

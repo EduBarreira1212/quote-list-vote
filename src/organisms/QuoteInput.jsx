@@ -46,7 +46,7 @@ const QuoteInput = () => {
             <section className="quote-input-section hidden">
                 <Quote>{quoteList[currentIndex]}</Quote>
                 <VoteButtons onClick={handleVoteClick}/>
-                <Button classname="btn" onClick={handleClick}>Send</Button>
+                <Button classname="btn-ToVote" onClick={handleClick}>Send</Button>
                 {quoteList.sort((a, b) => b.note - a.note).map((item, index) => (
                 <Quote key={index}>{item}</Quote>
                 ))}
