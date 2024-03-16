@@ -37,8 +37,7 @@ const QuoteInput = () => {
     }
 
     const handleClick = () => {
-        //setQuoteList((prev) => [...prev, quote]);
-        console.log(quoteList[currentIndex]);
+        quoteList[currentIndex].note = note;
         nextItem();
     }
 
