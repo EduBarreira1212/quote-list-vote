@@ -1,12 +1,10 @@
 import './App.css';
-import HeaderOrganisms from './organisms/HeaderOrganisms';
-import QuoteInput from './organisms/QuoteInput';
+import Home from './templates/Home';
 
 function App() {
   return (
     <div className="App">
-      <HeaderOrganisms/>
-      <QuoteInput/>
+      <Home/>
     </div>
   );
 }
