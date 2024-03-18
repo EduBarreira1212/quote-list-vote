@@ -3,8 +3,9 @@ import Paragraph from "../atoms/Paragraph";
 import Button from "../atoms/Button";
 
 const HeaderOrganisms = () => {
-    const handleClick = () => {
+    const handleClick = (event) => {
         document.querySelector(".quote-input-section").classList.remove("hidden");
+        event.target.classList.add("hidden");
     }
     return (
         <>
