@@ -1,4 +1,4 @@
-.btn{
+%btn{
   color: black;
   font-size: large;
   cursor: pointer;
@@ -21,6 +21,7 @@
 }
 
 .start-btn{
+  @extend %btn;
   height: 8vh;
   width: 8vw;
 }
@@ -42,12 +43,14 @@
 }
 
 .voteButtons-div button{
+  @extend %btn;
   height: 4vh;
   width: 3vw;
   font-size: larger;
 }
 
 .btn-ToVote{
+  @extend %btn;
   width: 30vw;
   font-size: larger;
 }
