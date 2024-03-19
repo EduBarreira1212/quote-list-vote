@@ -40,13 +40,13 @@
   flex-direction: row;
   gap: 1vw;
   justify-content: center;
-}
 
-.voteButtons-div button{
-  @extend %btn;
-  height: 4vh;
-  width: 3vw;
-  font-size: larger;
+  button{
+    @extend %btn;
+    height: 4vh;
+    width: 3vw;
+    font-size: larger;
+  }
 }
 
 .btn-ToVote{
@@ -61,11 +61,11 @@
   max-width: 25vw;
   min-width: 25vw;
   background-color: white;
-}
-
-#div-quote p{
-  font-size: larger;
-  font-weight: 700;
+  
+  p{
+    font-size: larger;
+    font-weight: 700;
+  }
 }
 
 .hidden{
