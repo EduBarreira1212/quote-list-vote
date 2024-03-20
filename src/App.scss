@@ -1,5 +1,6 @@
 %btn{
   color: black;
+  background-color: rgb(255, 255, 255);
   font-size: large;
   cursor: pointer;
 }
@@ -69,7 +70,9 @@
   max-height: 30vh;
   max-width: 25vw;
   min-width: 25vw;
-  background-color: white;
+  padding: 1vh 2vw;
+  border-radius: 1vw;
+  background-color: #c5d7fc;
 
   p{
     font-size: larger;
