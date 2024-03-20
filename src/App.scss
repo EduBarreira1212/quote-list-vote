@@ -63,6 +63,11 @@
   @extend %btn;
   width: 30vw;
   font-size: larger;
+  transition: background-color 0.3s ease;
+
+  &:hover{
+    background-color: rgb(5, 156, 5);
+  }
 }
 
 #div-quote{
