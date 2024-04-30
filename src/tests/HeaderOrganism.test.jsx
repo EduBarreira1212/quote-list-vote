@@ -1,11 +1,12 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react'
-import Paragraph from '../atoms/Paragraph'
+import { fireEvent, render, screen } from '@testing-library/react'
+import HeaderOrganisms from '../organisms/HeaderOrganisms';
 
-test("Render Paragraph", () => {
-    render(<Paragraph>Hello</Paragraph>)
+test('renders header with correct text', () => {
+    render(<HeaderOrganisms />);
+    const paragraph = screen.getByText('Welcome to the quote list vote');
+    const button = screen.getByText('Start voting');
 
-    const p = screen.getByText("Hello")
-
-    expect(p).toBeInTheDocument();
-})
+    expect(paragraph).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
+  });
