@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react'
-import VoteButtons from './atoms/VoteButtons';
+import VoteButtons from '../atoms/VoteButtons';
 
 
 test("click on button", () => {
